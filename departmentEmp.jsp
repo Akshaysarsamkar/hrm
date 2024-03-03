@@ -117,7 +117,7 @@
 
 							<div class="card m-5" style="width: 18rem;">
 								<img src="https://github.com/mdo.png"
-									class="card-img-top rounded-5" alt="...">
+									class="card-img-top rounded-circle" alt="...">
 								<div class="card-body text-center">
 									<h4 class="card-text ">Akshay sarsamkar
 									</h4>
@@ -129,7 +129,7 @@
 
 							<div class="card m-5" style="width: 18rem;">
 								<img src="https://github.com/mdo.png"
-									class="card-img-top rounded-5" alt="...">
+									class="card-img-top rounded-circle" alt="...">
 								<div class="card-body text-center">
 									<h4 class="card-text ">Akshay sarsamkar</h4>
 									<a href="ViewDetails.jsp" class="btn btn-info">View Details</a>
@@ -139,7 +139,7 @@
 
 							<div class="card m-5" style="width: 18rem;">
 								<img src="https://github.com/mdo.png"
-									class="card-img-top rounded-5" alt="...">
+									class="card-img-top rounded-circle" alt="...">
 								<div class="card-body text-center">
 									<h4 class="card-text ">Akshay sarsamkar
 									</h4>

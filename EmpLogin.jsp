@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Employees Login</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 	integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -31,15 +31,16 @@
 		<form class="card  border-0" style="align-items: center;">
 
 			<div class="card-body col-md-6">
-			<p class="text-center">.
-				<i class="fa fa-universal-access" style="font-size:98px;color:skyblue"></i>
+				<p class="text-center">.
+					<i class="fa fa-user-circle"
+						style="font-size: 94px; color: skyblue; text-align: center"></i>
 				</p>
-				<h1 class="text-center display-6 ">Administrator Sign in Portal</h1>
+				<h1 class="text-center display-6">Employees Sign in Portal</h1>
 				<div class="border border-black p-3 bg-light">
 
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">
-						UserName</label> <input type="text" class="form-control"
+							Email</label> <input type="text" class="form-control"
 							id="exampleInputtext">
 					</div>
 					<div class="mb-3">
@@ -47,11 +48,12 @@
 							Password</label> <input type="text" class="form-control"
 							id="exampleInputtext">
 					</div>
-					
-					
+
+
 					<div class="text-center">
-					   <p>Not a Member ? <a href="Signup.jsp" >Create new Account</a></p>
-					   <p>Employees ? <a href="EmpLogin.jsp">Login</a></p>
+						<p>
+							Administrator ? <a href="Login.jsp">Login</a>
+						</p>
 					</div>
 
 					<div class="d-grid gap-2">

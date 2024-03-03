@@ -18,7 +18,7 @@
 			</div>
 			<div class="p-2">
 				<h5>
-					<span class="d-none d-sm-inline mx-1">Ashay</span>
+					<span class="d-none d-sm-inline mx-1">Akshay</span>
 				</h5>
 				<h5>Akshay@gnail</h5>
 			</div>
@@ -102,17 +102,5 @@
 
 		</ul>
 		<hr>
-		<div class="dropdown pb-4">
-			<a href="#"
-				class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-				id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-				<img src="#" alt="hugenerd" width="30" height="30"
-				class="rounded-circle"> <span class="d-none d-sm-inline mx-1">loser</span>
-			</a>
-			<ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-
-				<li><a class="dropdown-item" href="#">Sign out</a></li>
-			</ul>
-		</div>
-	</div>
+			</div>
 </div>
