@@ -12,7 +12,7 @@
 				<a href="#"
 					class="d-flex align-items-center text-white text-decoration-none"
 					id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-					<img src="https://github.com/mdo.png" alt="hugenerd" width="50"
+					<img src="https://www.pngarts.com/files/5/User-Avatar-PNG-Free-Download.png" alt="hugenerd" width="50"
 					height="50" class="rounded-circle">
 				</a>
 			</div>

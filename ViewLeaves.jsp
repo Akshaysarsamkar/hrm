@@ -70,7 +70,7 @@
 
 					<h3 class="mb-3">Leave History Table</h3>
 
-					<table class="table">
+					<table class="table table-striped">
 						<thead>
 							<tr>
 								<th scope="col">#</th>
