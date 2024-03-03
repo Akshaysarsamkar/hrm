@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Dashboard</title>
+<title>Recruments</title>
 
 <link rel="stylesheet" href="mycss.css">
 
@@ -50,74 +50,24 @@
 						<li><a class="dropdown-item" href="Login.jsp">Sign out</a></li>
 					</ul>
 				</div>
-
-				<%-- content section / organization info  --%>
-				<div class="my-5 d-flex flex-row bg-light py-4">
-
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Administration</h4>
-							<h1 class="card-text text-end">3</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-address-card-o fw-light"></i> Administrator
-							</h6>
-						</div>
-
-					</div>
-
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Department</h4>
-							<h1 class="card-text text-end">5</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-bar-chart fw-light"></i> Avialiable Department
-							</h6>
-						</div>
-
-					</div>
-
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Employees</h4>
-							<h1 class="card-text text-end">23</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-user-o fw-light"></i> Total Present Emp
-							</h6>
-						</div>
-
-					</div>
-
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Employees</h4>
-							<h1 class="card-text text-end">3</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-user-times fw-light"></i> 	 On Leave Emp
-							</h6>
-						</div>
-
-					</div>
+				<div class="mt-3 mx-2">
+					<h1>Submitted Applications</h1>
 				</div>
 
-
 				<%-- New Employees Details --%>
-				<div class="py-3 border border-dark-subtle bg-light">
-					<h1 class="text-center display-6">New Employees</h1>
-					<hr class="text-danger">
+				<div class="p-3 border border-dark-subtle bg-light ">
 
 					<%-- table --%>
 					<table class="table">
 						<thead>
 							<tr>
-								<th scope="col">Image</th>
 								<th scope="col">First Name</th>
 								<th scope="col">Last Name</th>
 								<th scope="col">Mobile</th>
-								<th scope="col">Action</th>
+								<th scope="col">Email</th>
+								<th scope="col">Position</th>
+								<th scope="col">Manage</th>
+
 							</tr>
 						</thead>
 						<tbody>
@@ -126,37 +76,35 @@
 								<td>Mark</td>
 								<td>Otto</td>
 								<td>@mdo</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td>@mdo</td>
+								<td>
+									<button type="button" class="btn btn-danger">Danger</button>
+								</td>
 							</tr>
 							<tr>
 								<th scope="row">2</th>
 								<td>Jacob</td>
 								<td>Thornton</td>
 								<td>@fat</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td>@mdo</td>
+								<td>
+									<button type="button" class="btn btn-danger">Danger</button>
+								</td>
 							</tr>
 							<tr>
 								<th scope="row">3</th>
 								<td>Larry the Bird</td>
 								<td>@twitter</td>
 								<td>@mdo</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td>@mdo</td>
+								<td>
+									<button type="button" class="btn btn-danger">Danger</button>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-
-
-
-
-
 			</div>
+
 		</div>
 	</div>
 	<script

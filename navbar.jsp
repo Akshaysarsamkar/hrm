@@ -16,5 +16,6 @@
 						href="Login.jsp"><i class="fa fa-user-circle"></i> Admin</a>
 				</div>
 			</div>
+			</div>
 	</nav>
 </div>

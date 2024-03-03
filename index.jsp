@@ -1,6 +1,4 @@
 
-<%@page import="com.conn.DBConn"%>
-<%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -44,13 +42,6 @@
 	</div>
 
 
-<%
-
-Connection conn  = DBConn.getcon();
-
-out.println(conn);
-
-%>
 
 
 
@@ -72,38 +63,35 @@ out.println(conn);
 			the GNU Free Documentation License. You can help here! You may change
 			these pages and make new pages. Read the help pages and other good
 			pages to learn how to write pages here. If you need help, you may ask
-			questions at Simple talk.</p>
+			questions at Simple talk.The open source community is the 💗 heart of
+			GitHub and fundamental to how we build software today. See for
+			yourself: 1. GitHub Sponsors helped support more than 5kindividuals
+			and projects around the world 🌍 2. Open source projects on GitHub
+			received a stunning 218 millioncontributions 🚀 in the last year
+			alone 3. Every minutea developer creates a...</p>
 
 	</div>
 	<footer>
 		<div class="bg-dark text-white text-center ">
 			<h4>Created By Akshay Sarsamkar | &#169</h4>
-			
-				<div class="d-flex row justify-content-center">
-					<div class="col-md-1">
-						<a href="https://www.linkedin.com/akshaysarsamkar"><i class="fa-brands fa-linkedin"
-							style="font-size: 25px;"></i></a>
-					</div>
 
-					<div class="col-md-1">
-						<a href="https://github.com/Akshaysarsamkar"> <i class="fa-brands fa-square-github"
-							style="font-size: 25px;"></i></a>
-					</div>
-
-					<div class="col-md-1">
-						<a src="#"> <i class="fa-brands fa-square-instagram"
-							style="font-size: 25px;"></i></a>
-					</div>
-
+			<div class="d-flex row justify-content-center">
+				<div class="col-md-1">
+					<a href="https://www.linkedin.com/akshaysarsamkar"><i
+						class="fa-brands fa-linkedin" style="font-size: 25px;"></i></a>
 				</div>
-		 
+
+				<div class="col-md-1">
+					<a href="https://github.com/Akshaysarsamkar"> <i
+						class="fa-brands fa-square-github" style="font-size: 25px;"></i></a>
+				</div>
+
+				<div class="col-md-1">
+					<a src="#"> <i class="fa-brands fa-square-instagram"
+						style="font-size: 25px;"></i></a>
+				</div>
+			</div>
 		</div>
-
-
-
-
-
-
 	</footer>
 
 	<script

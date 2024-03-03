@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Dashboard</title>
+<title>Employees</title>
 
 <link rel="stylesheet" href="mycss.css">
 
@@ -51,62 +51,19 @@
 					</ul>
 				</div>
 
-				<%-- content section / organization info  --%>
-				<div class="my-5 d-flex flex-row bg-light py-4">
-
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Administration</h4>
-							<h1 class="card-text text-end">3</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-address-card-o fw-light"></i> Administrator
-							</h6>
-						</div>
-
-					</div>
-
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Department</h4>
-							<h1 class="card-text text-end">5</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-bar-chart fw-light"></i> Avialiable Department
-							</h6>
-						</div>
-
-					</div>
-
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Employees</h4>
-							<h1 class="card-text text-end">23</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-user-o fw-light"></i> Total Present Emp
-							</h6>
-						</div>
-
-					</div>
-
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Employees</h4>
-							<h1 class="card-text text-end">3</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-user-times fw-light"></i> 	 On Leave Emp
-							</h6>
-						</div>
-
-					</div>
-				</div>
 
 
 				<%-- New Employees Details --%>
-				<div class="py-3 border border-dark-subtle bg-light">
-					<h1 class="text-center display-6">New Employees</h1>
+				<div class="py-3 border border-dark-subtle bg-light my-3">
+
+					<h4 class="px-5 display-6">All Employees</h4>
+					<a href="AddEmp.jsp" class="mx-5 mt-2 btn btn-primary"
+						style="width: 15%;"> Add Employee <i class="fa-solid fa-plus"
+						style="font-size: 15px;"></i>
+					</a>
+
+
+
 					<hr class="text-danger">
 
 					<%-- table --%>
@@ -126,27 +83,71 @@
 								<td>Mark</td>
 								<td>Otto</td>
 								<td>@mdo</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td><div class="dropdown">
+										<a class="btn btn-success rounded-pill dropdown-toggle"
+											href="#" role="button" data-bs-toggle="dropdown"
+											aria-expanded="false"> <i class="fa fa-plus-circle"></i>
+											Manage
+										</a>
+
+										<ul class="dropdown-menu">
+											<li><a href="ViewDetails.jsp" class="btn"><i
+													class="fa-solid fa-eye text-success"></i> View </a></li>
+											<li><a class="dropdown-item" href="UpdateEmp.jsp"><i
+													class="fa fa-edit text-info"></i> Edit</a></li>
+											<hr class="text-danger">
+											<li><a class="dropdown-item" href="#"><i
+													class="fa fa-trash-o text-danger"></i> Delete</a></li>
+										</ul>
+									</div></td>
 							</tr>
 							<tr>
 								<th scope="row">2</th>
 								<td>Jacob</td>
 								<td>Thornton</td>
 								<td>@fat</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td><div class="dropdown">
+										<a class="btn btn-success rounded-pill dropdown-toggle"
+											href="#" role="button" data-bs-toggle="dropdown"
+											aria-expanded="false"> <i class="fa fa-plus-circle"></i>
+											Manage
+										</a>
+
+										<ul class="dropdown-menu">
+											<li><a href="ViewDetails.jsp" class="btn"><i
+													class="fa-solid fa-eye text-success"></i> View </a></li>
+											<li><a class="dropdown-item" href="UpdateEmp.jsp"><i
+													class="fa fa-edit text-info"></i> Edit</a></li>
+											<hr class="text-danger">
+											<li><a class="dropdown-item" href="#"><i
+													class="fa fa-trash-o text-danger"></i> Delete</a></li>
+										</ul>
+									</div></td>
 							</tr>
 							<tr>
 								<th scope="row">3</th>
 								<td>Larry the Bird</td>
 								<td>@twitter</td>
 								<td>@mdo</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td>
+									<div class="dropdown">
+										<a class="btn btn-success rounded-pill dropdown-toggle"
+											href="#" role="button" data-bs-toggle="dropdown"
+											aria-expanded="false"> <i class="fa fa-plus-circle"></i>
+											Manage
+										</a>
+
+										<ul class="dropdown-menu">
+											<li><a href="ViewDetails.jsp" class="btn"><i
+													class="fa-solid fa-eye text-success"></i> View </a></li>
+											<li><a class="dropdown-item" href="UpdateEmp.jsp"><i
+													class="fa fa-edit text-info"></i> Edit</a></li>
+											<hr class="text-danger">
+											<li><a class="dropdown-item" href="#"><i
+													class="fa fa-trash-o text-danger"></i> Delete</a></li>
+										</ul>
+									</div>
+								</td>
 							</tr>
 						</tbody>
 					</table>

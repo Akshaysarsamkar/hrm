@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.Date"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Dashboard</title>
+<title>Attendence</title>
 
 <link rel="stylesheet" href="mycss.css">
 
@@ -50,73 +51,82 @@
 						<li><a class="dropdown-item" href="Login.jsp">Sign out</a></li>
 					</ul>
 				</div>
+				<%-- attendence section --%>
 
-				<%-- content section / organization info  --%>
-				<div class="my-5 d-flex flex-row bg-light py-4">
+				<div class="py-3 border border-dark-subtle bg-light my-3">
+					<h1 class="display-5 text-center" style="color: skyblue;">
+						<i class="fa fa-check-circle-o"></i> Employees Attendence
+					</h1>
 
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Administration</h4>
-							<h1 class="card-text text-end">3</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-address-card-o fw-light"></i> Administrator
-							</h6>
-						</div>
 
-					</div>
+					<%
+					Date date = new Date();
+					%>
 
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Department</h4>
-							<h1 class="card-text text-end">5</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-bar-chart fw-light"></i> Avialiable Department
-							</h6>
-						</div>
 
-					</div>
+					<div class="border border-dark-subtle bg-light p-4 mx-3">
+						<p>***All Field Are Required</p>
+						<hr class="text-danger">
 
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Employees</h4>
-							<h1 class="card-text text-end">23</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-user-o fw-light"></i> Total Present Emp
-							</h6>
-						</div>
+						<form>
+							<div class="mb-3">
+								<label for="exampleInputdate" class="form-label">Email </label>
+								<input type="" class="form-control" id="exampleInputdate"
+									aria-describedby="emailHelp" value="<%=date%>">
 
-					</div>
+							</div>
+							<div class="mb-3">
+								<label for="exampleInputstaffer" class="form-label">Staffer
+								</label> <select class="form-select" aria-label="Size 3 select example"
+									id="exampleInputstaffer">
+									<option selected>-----------------</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
 
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
-						style="width: 18rem;">
-						<div class="card-body">
-							<h4 class="card-title text-end">Employees</h4>
-							<h1 class="card-text text-end">3</h1>
-							<h6 class="fw-light text-start">
-								<i class="fa fa-user-times fw-light"></i> 	 On Leave Emp
-							</h6>
-						</div>
+							<div class="mb-3">
+								<label for="" exampleInputstatus"" class="form-label">Status
+								</label> <select class="form-select form-select-sm"
+									aria-label="Small select example">
+									<option value="1">Present</option>
+									<option value="2">Absents</option>
 
+								</select>
+							</div>
+							<centre>
+							<button type="submit" class="btn btn-outline-success"
+								style="width: 100%;">
+								<i class="fa fa-check"></i> SignIn
+							</button>
+							</centre>
+						</form>
 					</div>
 				</div>
 
+				<div class="my-3 border border-dark-subtle bg-light p-4">
 
-				<%-- New Employees Details --%>
-				<div class="py-3 border border-dark-subtle bg-light">
-					<h1 class="text-center display-6">New Employees</h1>
+					<h1 class="text-center display-6 text-primary">
+						<i class="fa fa-sign-in" style="font-size: 36px"></i> Signed In
+						Staffer(s)
+					</h1>
+
+					<p class="">this is a list of staffer which is present</p>
+
+
+
+
 					<hr class="text-danger">
 
 					<%-- table --%>
 					<table class="table">
 						<thead>
 							<tr>
-								<th scope="col">Image</th>
-								<th scope="col">First Name</th>
-								<th scope="col">Last Name</th>
-								<th scope="col">Mobile</th>
+								<th scope="col">Date</th>
+								<th scope="col">FirstIn(Arrival)</th>
+								<th scope="col">LastOut(Departure)</th>
+								<th scope="col">Name</th>
 								<th scope="col">Action</th>
 							</tr>
 						</thead>
@@ -126,27 +136,21 @@
 								<td>Mark</td>
 								<td>Otto</td>
 								<td>@mdo</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td><button type="button" class="btn btn-primary"><i class="fa fa-sign-in"></i>  SignOut</button></td>
 							</tr>
 							<tr>
 								<th scope="row">2</th>
 								<td>Jacob</td>
 								<td>Thornton</td>
 								<td>@fat</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td><button type="button" class="btn btn-primary"><i class="fa fa-sign-in"></i>  SignOut</button></td>
 							</tr>
 							<tr>
 								<th scope="row">3</th>
 								<td>Larry the Bird</td>
 								<td>@twitter</td>
 								<td>@mdo</td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient
-">View </a></td>
+								<td><button type="button" class="btn btn-primary"><i class="fa fa-sign-in"></i>  SignOut</button></td>
 							</tr>
 						</tbody>
 					</table>
