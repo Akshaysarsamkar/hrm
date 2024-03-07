@@ -1,3 +1,5 @@
+<%@page import="com.conn.DBConn"%>
+<%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -37,11 +39,11 @@
 			<%-- logout section as a navbar --%>
 			<div class="col py-3 bg-body-secondary">
 
-				<div class="dropdown pb-4 bg-warning p-4">
+				<div class="dropdown pb-4 bg-warning p-4 justify-content-end">
 					<a href="#"
 						class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
 						id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-						<img src="https://github.com/mdo.png	" alt="hugenerd" width="50"
+						<img src="https://avatars.githubusercontent.com/u/112844228?v=4" alt="hugenerd" width="50"
 						height="50" class="rounded-circle"> <span
 						class="d-none d-sm-inline mx-1">Hello Akshay</span>
 					</a>
@@ -70,40 +72,45 @@
 
 							</tr>
 						</thead>
+
+
+						<%
+						int id;
+						String fname, lname, position, email, phone;
+						Connection c = DBConn.getcon();
+
+						Statement st = c.createStatement();
+
+						ResultSet rs = st.executeQuery("select * from recrument");
+
+						while (rs.next()) {
+							id = rs.getInt("rid");
+							fname = rs.getString("Fname");
+							lname = rs.getString("lname");
+							position = rs.getString("position");
+							email = rs.getString("email");
+							phone = rs.getString("phone");
+						%>
+
 						<tbody>
 							<tr>
-								<th scope="row">1</th>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-								<td>@mdo</td>
+								<th scope="row"><%= id %></th>
+								<td><%= fname %></td>
+								<td><%= lname %></td>
+								<td><%= position %></td>
+								<td><%= email %></td>
 								<td>
-									<button type="button" class="btn btn-danger">Danger</button>
+									<a type="button" class="btn btn-danger" href="delete.jsp?rid=<%=id%>">Delete</a>
 								</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-								<td>@mdo</td>
-								<td>
-									<button type="button" class="btn btn-danger">Danger</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Larry the Bird</td>
-								<td>@twitter</td>
-								<td>@mdo</td>
-								<td>@mdo</td>
-								<td>
-									<button type="button" class="btn btn-danger">Danger</button>
 							</tr>
 						</tbody>
-					</table>
+						<%
+						}
+						%>
+						</table>
+						</div>
 				</div>
-			</div>
+			</div> 
 
 		</div>
 	</div>

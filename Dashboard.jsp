@@ -66,7 +66,7 @@
 
 					</div>
 
-					<div class="border border-dark-subtle bg-body p-5 mx-5"
+					<%-- 	<div class="border border-dark-subtle bg-body p-5 mx-5"
 						style="width: 18rem;">
 						<div class="card-body">
 							<h4 class="card-title text-end">Department</h4>
@@ -76,7 +76,7 @@
 							</h6>
 						</div>
 
-					</div>
+					</div> --%>
 
 					<div class="border border-dark-subtle bg-body p-5 mx-5"
 						style="width: 18rem;">
@@ -96,7 +96,7 @@
 							<h4 class="card-title text-end">Employees</h4>
 							<h1 class="card-text text-end">3</h1>
 							<h6 class="fw-light text-start">
-								<i class="fa fa-user-times fw-light"></i> 	 On Leave Emp
+								<i class="fa fa-user-times fw-light"></i> On Leave Emp
 							</h6>
 						</div>
 

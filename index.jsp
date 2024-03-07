@@ -1,4 +1,5 @@
-
+<%@page import="com.conn.DBConn"%>
+<%@page import=" java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -42,7 +43,10 @@
 	</div>
 
 
-
+	<%
+	Connection c = DBConn.getcon();
+	out.println(c);
+	%>
 
 
 	<div class="container my-4 border">
@@ -63,8 +67,8 @@
 			the GNU Free Documentation License. You can help here! You may change
 			these pages and make new pages. Read the help pages and other good
 			pages to learn how to write pages here. If you need help, you may ask
-			questions at Simple talk.The open source community is the 💗 heart of
-			GitHub and fundamental to how we build software today. See for
+			questions at Simple talk.The open source community is the 💗 heart
+			of GitHub and fundamental to how we build software today. See for
 			yourself: 1. GitHub Sponsors helped support more than 5kindividuals
 			and projects around the world 🌍 2. Open source projects on GitHub
 			received a stunning 218 millioncontributions 🚀 in the last year

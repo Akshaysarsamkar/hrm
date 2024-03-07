@@ -101,7 +101,7 @@
 							</div>
 						</div>
 
-						<div class="m-5" style="width: 18rem;">
+				<%--		<div class="m-5" style="width: 18rem;">
 							<img
 								src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png"
 								class="card-img-top rounded-circle" alt="...">
@@ -109,7 +109,7 @@
 								<h4 class="card-text ">Akshay sarsamkar</h4>
 								<a href="ViewDetails.jsp" class="btn btn-info">View Details</a>
 							</div>
-						</div>
+						</div> --%>
 
 					</div>
 
@@ -122,7 +122,7 @@
 
 						<div class="d-flex p-2">
 
-							<div class="m-5" style="width: 18rem;">
+						<%--	<div class="m-5" style="width: 18rem;">
 								<img
 									src="https://tse3.mm.bing.net/th?id=OIP.2i5UaEHaQM3PYAYXQyM1AAAAAA&pid=Api&P=0&h=180"
 									class="card-img-top rounded-circle" alt="...">
@@ -131,7 +131,7 @@
 									<a href="ViewDetails.jsp" class="btn btn-info">View Details</a>
 
 								</div>
-							</div>
+							</div>  --%>
 
 
 							<div class="m-5" style="width: 18rem;">

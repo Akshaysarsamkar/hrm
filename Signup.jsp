@@ -24,11 +24,11 @@
 <body>
 
 	<%@include file="navbar.jsp"%>
-<h1>sdaadand</h1>
+
 
 	<div class="p-5 container mt-5 ">
 
-		<form class="card  border-0" style="align-items: center;">
+		<form action="AddAdmin" method="post" class="card  border-0" style="align-items: center;">
 
 			<div class="card-body col-md-6">
 
@@ -37,29 +37,29 @@
 						<i class="fa-solid fa-user-plus" style="font-size:50px; color:skyblue;"></i>
 					</h1>
 				</div>
-				<h1 class="text-center display-6 ">Administrator Sign Up Portal</h1>
+				<h1 class="text-center display-6 ">Administrator Registration</h1>
 				<div class="border border-black p-3 bg-light">
 
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">
 							UserName</label> <input type="text" class="form-control"
-							id="exampleInputtext">
+							id="exampleInputtext" name="uname">
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">
 							Password</label> <input type="text" class="form-control"
-							id="exampleInputtext">
+							id="exampleInputtext" name="pass">
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">
 							Email</label> <input type="text" class="form-control"
-							id="exampleInputtext">
+							id="exampleInputtext" name="email">
 					</div>
 
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">
-							Phone No</label> <input type="text" class="form-control"
-							id="exampleInputtext">
+							Phone No</label> <input type="file" class="form-control"
+							id="exampleInputtext" name="img">
 					</div>
 
 					<div class="text-center">
@@ -69,7 +69,7 @@
 					</div>
 
 					<div class="d-grid gap-2">
-						<button class="btn btn-primary" type="submit">Submit</button>
+						<button class="btn btn-primary" type="submit">Register</button>
 					</div>
 				</div>
 			</div>
