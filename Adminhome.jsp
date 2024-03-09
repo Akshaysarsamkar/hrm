@@ -1,3 +1,20 @@
+
+
+<%@page import="com.entity.Admin"%>
+<%@page import="jakarta.servlet.http.HttpSession"%>
+<%
+
+System.out.println("11111");
+Admin a = (Admin) request.getSession().getAttribute("currentAdmin");
+if (a == null) {
+	response.sendRedirect("Login.jsp");
+}
+//System.out.println(a.getEmail());
+
+%>
+
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark ">
@@ -18,9 +35,9 @@
 			</div>
 			<div class="p-2">
 				<h5>
-					<span class="d-none d-sm-inline mx-1">Akshay</span>
+					<span class="d-none d-sm-inline mx-1"><%= a.getUsername() %></span>
 				</h5>
-				<h5>Akshay@gnail</h5>
+				<h5>Administration</h5>
 			</div>
 
 		</div>

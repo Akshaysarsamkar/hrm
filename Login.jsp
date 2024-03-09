@@ -33,7 +33,7 @@
 
 	<div class="p-5 container mt-5 ">
 
-		<form class="card  border-0" style="align-items: center;">
+		<form class="card  border-0" style="align-items: center;" action="LoginServlet" method="post">
 
 			<div class="card-body col-md-6">
 			<p class="text-center">.
@@ -44,13 +44,13 @@
 
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">
-						UserName</label> <input type="text" class="form-control"
-							id="exampleInputtext">
+						UserName</label> <input name="uname" type="text" class="form-control"
+							id="exampleInputtext" required>
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">
-							Password</label> <input type="text" class="form-control"
-							id="exampleInputtext">
+							Password</label> <input name="pass" type="pass" class="form-control"
+							id="exampleInputtext" required>
 					</div>
 					
 					

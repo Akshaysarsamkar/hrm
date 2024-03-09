@@ -43,11 +43,11 @@
 						id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 						<img src="https://github.com/mdo.png	" alt="hugenerd" width="50"
 						height="50" class="rounded-circle"> <span
-						class="d-none d-sm-inline mx-1">Hello Akshay</span>
+						class="d-none d-sm-inline mx-1">Hello  </span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-dark text-small shadow">
 
-						<li><a class="dropdown-item" href="Login.jsp">Sign out</a></li>
+						<li><a class="dropdown-item" href="SignServlet">Sign out</a></li>
 					</ul>
 				</div>
 
