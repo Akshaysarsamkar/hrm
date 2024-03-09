@@ -60,6 +60,11 @@ public class Admin {
 		this.password = password;
 	}
 
+	@Override
+	public String toString() {
+		return "Admin [id=" + id + ", username=" + username + ", email=" + email + ", password=" + password + "]";
+	}
+
 
 
 
