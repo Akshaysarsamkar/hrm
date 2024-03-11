@@ -35,7 +35,7 @@ if (a == null) {
 			</div>
 			<div class="p-2">
 				<h5>
-					<span class="d-none d-sm-inline mx-1"><%= a.getUsername() %></span>
+					<span class="d-none d-sm-inline mx-1"></span>
 				</h5>
 				<h5>Administration</h5>
 			</div>

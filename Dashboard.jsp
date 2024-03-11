@@ -1,3 +1,5 @@
+<%@page import="com.conn.DBConn"%>
+<%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -43,7 +45,7 @@
 						id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 						<img src="https://github.com/mdo.png	" alt="hugenerd" width="50"
 						height="50" class="rounded-circle"> <span
-						class="d-none d-sm-inline mx-1">Hello  </span>
+						class="d-none d-sm-inline mx-1">Hello </span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-dark text-small shadow">
 
@@ -121,6 +123,40 @@
 							</tr>
 						</thead>
 						<tbody>
+
+							<%
+							int eid, salary;
+							String FirstName, LastName, Email, Mobile, Gender, Bank, AccountNo, Language, Department, Emergency;
+							Connection con = DBConn.getcon();
+							Statement stm = con.createStatement();
+
+							ResultSet res = stm.executeQuery("select * from Employee");
+
+							while (res.next()) {
+								eid = res.getInt("EmpId");
+								FirstName = res.getString("FirstName");
+								LastName = res.getString("LastName");
+								Mobile = res.getString("Mobile");
+							%>
+						
+						<tbody>
+							<tr>
+								<th scope="row"><%=eid%></th>
+								<td><%=FirstName%></td>
+								<td><%=LastName%></td>
+								<td><%=Mobile%></td>
+								<td><a href="ViewDetails.jsp"
+									class="btn bg-warning bg-gradient">View </a></td>
+							</tr>
+							<%
+							}
+							%>
+
+							<%--
+							
+							
+							
+						<tbody>
 							<tr>
 								<th scope="row">1</th>
 								<td>Mark</td>
@@ -148,6 +184,26 @@
 									class="btn bg-warning bg-gradient
 ">View </a></td>
 							</tr>
+							
+							
+							
+							
+							
+							
+							
+							 --%>
+
+
+
+
+
+
+
+
+
+
+
+
 						</tbody>
 					</table>
 				</div>

@@ -54,10 +54,10 @@
 
 				<div class="border px-4 py-4 border-dark-subtle my-3 bg-light">
 					<h1 class="text-center display-5"><i class="fa fa-plus" style="font-size:48px;color:skyblue"></i> Add Employee</h1>
-					<form>
+					<form action="AddEmpsevrlet" method="post">
 						<div class="mb-3">
 							<label for="exampleInputtext" class="form-label">First
-								Name</label> <input type="text" class="form-control"
+								Name</label> <input name="fname" type="text" class="form-control"
 								id="exampleInputtext" aria-describedby="textHelp">
 
 						</div>
@@ -65,33 +65,33 @@
 
 						<div class="mb-3">
 							<label for="exampleInputlastname" class="form-label">Last
-								Name</label> <input type="text" class="form-control"
+								Name</label> <input name="lname" type="text" class="form-control"
 								id="exampleInputlastname">
 						</div>
 
 
 						<div class="mb-3">
-							<label for="exampleInputphone" class="form-label">Last
-								Name</label> <input type="number" class="form-control"
+							<label for="exampleInputphone" class="form-label">Mobile
+							</label> <input  name="mobile" type="number" class="form-control"
 								id="exampleInputphone">
 						</div>
 
 						<div class="mb-3">
 							<label for="exampleInputEmail1" class="form-label">Email
-							</label> <input type="email" class="form-control" id="exampleInputEmail1"
+							</label> <input name="email" type="email" class="form-control" id="exampleInputEmail1"
 								aria-describedby="emailHelp">
 
 						</div>
 
 						<div class="mb-3">
 							<label for="exampleInputemergency" class="form-label">
-								Emergency</label> <input type="number" class="form-control"
+								Emergency</label> <input name="Emergency" type="number" class="form-control"
 								id="exampleInputemergency">
 						</div>
 
 						<div class="mb-3">
 							<label for="exampleInputSalary" class="form-label">
-								Salary</label> <input type="number" class="form-control"
+								Salary</label> <input name="Salary" type="number" class="form-control"
 								id="exampleInputSalary">
 						</div>
 
@@ -99,31 +99,31 @@
 
 						<div class="mb-3">
 							<label for="exampleInputGender" class="form-label">
-								Gender</label> <input type="text" class="form-control"
+								Gender</label> <input name="Gender" type="text" class="form-control"
 								id="exampleInputGender">
 						</div>
 
 
 						<div class="mb-3">
 							<label for="exampleInputDepartment" class="form-label">
-								Department</label> <input type="text" class="form-control"
+								Department</label> <input name="Department" type="text" class="form-control"
 								id="exampleInputDepartment">
 						</div>
 
 						<div class="mb-3">
 							<label for="exampleInputBank" class="form-label"> Bank</label> <input
-								type="text" class="form-control" id="exampleInputBank">
+								name="Bank" type="text" class="form-control" id="exampleInputBank">
 						</div>
 
 
 						<div class="mb-3">
-							<label for="exampleInputNuban" class="form-label">Nuban</label>
-							<input type="number" class="form-control" id="exampleInputNuban">
+							<label for="exampleInputNuban" class="form-label">Account No</label>
+							<input name="accno"  type="number" class="form-control" id="exampleInputNuban">
 						</div>
 
 						<div class="mb-3">
 							<label for="exampleInputLanguage" class="form-label">Language</label>
-							<input type="text" class="form-control" id="exampleInputLanguage">
+							<input name="Language" type="text" class="form-control" id="exampleInputLanguage">
 						</div>
 						
 						<div class="mb-3">
@@ -132,7 +132,7 @@
 						</div>
 						
 						
-				<a type="button" class="btn btn-outline-success text-center"><i class="fa fa-plus-circle"></i>  Add Employee</a>
+				<button type="submit" class="btn btn-outline-success text-center"><i class="fa fa-plus-circle"></i>Add Employee</button>
 					</form>
 				</div>
 
