@@ -1,0 +1,8 @@
+<-- create Employees table -->
+
+create table Employee (EmpId int primary key  AUTO_INCREMENT,FirstName varchar(40),LastName varchar(40),Email varchar(30),Mobile varchar(12),
+Gender varchar(8),BankName varchar(40),AccountNo varchar(40),Language varchar(30),Department varchar(20),
+Emergency varchar(40),salary int,img blob);
+
+
+
