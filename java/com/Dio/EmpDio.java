@@ -2,6 +2,7 @@ package com.Dio;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import com.entity.Emp;
 
@@ -65,7 +66,39 @@ public class EmpDio {
 
 
 
-	
+	public Emp Login(String email,String password) {
+		
+		Emp e = null;
+		
+		try {
+			
+			String sql = "select * from Employee where Email=? and Password = ?";
+			
+			PreparedStatement pstm = conn.prepareStatement(sql);
+			
+			pstm.setString(1, email);
+			pstm.setString(2, password);
+			
+			ResultSet r = pstm.executeQuery();
+			
+			if(r.next()) {
+				e = new Emp();
+				
+				String fname = r.getString("FirstName");
+				int id = r.getInt("EmpId");
+				
+				e.setFirstName(fname);
+				e.setEid(id);
+			
+			}
+			
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+		return e;
+		
+	}
 	
 	
 	

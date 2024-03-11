@@ -1,4 +1,4 @@
-package com.Dio;
+  package com.Dio;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -71,7 +71,7 @@ System.out.println(pstm.toString());
 			}
 
 		} catch (Exception e) {
-
+			e2.printStackTrace();
 		}
 
 		return a;
