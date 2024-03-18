@@ -1,6 +1,24 @@
+<%@page import="com.entity.Emp"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.Date"%>
+
+
+<%
+
+//System.out.println("11111");
+Emp a = (Emp) request.getSession().getAttribute("currentAdmin");
+
+if (a == null) {
+	response.sendRedirect("Login.jsp");
+}
+//System.out.println(a.getEmail());
+
+%>
+
+
+
+
 
 <!DOCTYPE html>
 <html>

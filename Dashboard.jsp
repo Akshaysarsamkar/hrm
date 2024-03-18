@@ -133,6 +133,7 @@
 							ResultSet res = stm.executeQuery("select * from Employee");
 
 							while (res.next()) {
+
 								eid = res.getInt("EmpId");
 								FirstName = res.getString("FirstName");
 								LastName = res.getString("LastName");
@@ -145,8 +146,16 @@
 								<td><%=FirstName%></td>
 								<td><%=LastName%></td>
 								<td><%=Mobile%></td>
-								<td><a href="ViewDetails.jsp"
-									class="btn bg-warning bg-gradient">View </a></td>
+								<td>
+									<form  action="ShowEmpinfo" method="post">
+										<!-- <a href="ViewDetails.jsp?id=<%=eid%>"
+											class="btn bg-warning bg-gradient">View </a> -->
+											
+											
+											<input type="hidden" name="id" value="<%=eid%>">
+											<input type="submit" value="View" class="btn btn-danger">
+									</form>
+								</td>
 							</tr>
 							<%
 							}

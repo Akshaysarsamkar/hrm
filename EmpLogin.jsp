@@ -28,7 +28,7 @@
 
 	<div class="p-5 container mt-5 ">
 
-		<form class="card  border-0" style="align-items: center;" action="/EmpLogin" method="post">
+		<form class="card  border-0" style="align-items: center;" action="EmpLogin" method="post">
 
 			<div class="card-body col-md-6">
 				<p class="text-center">.

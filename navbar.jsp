@@ -1,5 +1,10 @@
+<%@page import="com.entity.Emp"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+
+
+
 
 <div class="fixed-top">
 	<nav class="navbar navbar-expand-lg bg-info">
@@ -16,6 +21,6 @@
 						href="Login.jsp"><i class="fa fa-user-circle"></i> Admin</a>
 				</div>
 			</div>
-			</div>
+		</div>
 	</nav>
 </div>

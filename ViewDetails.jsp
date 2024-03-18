@@ -1,3 +1,4 @@
+<%@page import="com.entity.Emp"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -29,6 +30,12 @@
 
 
 
+
+
+
+
+
+
 	<div class="container-fluid mt">
 		<div class="row flex-nowrap">
 
@@ -51,8 +58,10 @@
 					</ul>
 				</div>
 
-				<h1 class="display-5 text-info text-center m-3"><i class="fa fa-address-book" style="font-size:36px"></i>
-				 Employees Profile</h1>
+				<h1 class="display-5 text-info text-center m-3">
+					<i class="fa fa-address-book" style="font-size: 36px"></i>
+					Employees Profile
+				</h1>
 				<div
 					class="d-flex justify-content-around border border border-black m-2 align-middle">
 
