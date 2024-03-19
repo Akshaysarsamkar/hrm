@@ -1,3 +1,4 @@
+<%@page import="java.sql.ResultSet"%>
 <%@page import="com.entity.Emp"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -29,9 +30,11 @@
 <body>
 
 
+<%
+   
+Emp e = (Emp) request.getSession().getAttribute("empdata"); 
 
-
-
+%>
 
 
 
@@ -82,28 +85,28 @@
 						<table class="table table-striped table-hover">
 							<tbody>
 								<tr>
-									<td scope="col">First Name : Akshay</td>
+									<td scope="col">First Name :<%=e.getFirstName()%></td>
 								</tr>
 								<tr>
-									<td scope="col">Last Name : Sarsamkar</td>
+									<td scope="col">Last Name : <%=e.getLastName()%></td>
 								</tr>
 								<tr>
-									<td scope="col">Mobile : 9632154210</td>
+									<td scope="col">Mobile : <%= e.getMobile() %></td>
 								</tr>
 								<tr>
-									<td scope="col">Email : Akshaysarsamkar@gmail.com</td>
+									<td scope="col">Email :<%=e.getEmail() %></td>
 								</tr>
 								<tr>
-									<td scope="col">Gender : Male</td>
+									<td scope="col">Gender : <%= e.getGender() %></td>
 								</tr>
 								<tr>
-									<td scope="col">Department : FullStack</td>
+									<td scope="col">Department : <%=e.getDepartment() %></td>
 								</tr>
 								<tr>
-									<td scope="col">Language : English</td>
+									<td scope="col">Language : <%=e.getLanguage()%></td>
 								</tr>
 								<tr>
-									<td scope="col">Monthly Salary : 80000</td>
+									<td scope="col">Monthly Salary : <%=e.getSalary() %></td>
 								</tr>
 
 								<tr>
@@ -111,11 +114,11 @@
 								</tr>
 
 								<tr>
-									<td scope="col">Account Number : 80000</td>
+									<td scope="col">Account Number : <%=e.getAccountNo() %></td>
 								</tr>
 
 								<tr>
-									<td scope="col">Bank : 80000</td>
+									<td scope="col">Bank : <%=e.getBank() %></td>
 								</tr>
 
 								<tr>

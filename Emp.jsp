@@ -1,3 +1,7 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="com.conn.DBConn"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -78,7 +82,75 @@
 							</tr>
 						</thead>
 						<tbody>
+
+
+							<%
+							int eid, salary;
+							String FirstName, LastName, Email, Mobile, Gender, Bank, AccountNo, Language, Department, Emergency;
+							Connection con = DBConn.getcon();
+							Statement stm = con.createStatement();
+
+							ResultSet res = stm.executeQuery("select * from Employee");
+
+							while (res.next()) {
+
+								eid = res.getInt("EmpId");
+								FirstName = res.getString("FirstName");
+								LastName = res.getString("LastName");
+								Mobile = res.getString("Mobile");
+							%>
+						
+						<tbody>
 							<tr>
+								<th scope="row"><%=eid%></th>
+								<td><%=FirstName%></td>
+								<td><%=LastName%></td>
+								<td><%=Mobile%></td>
+								<td>
+									<form action="ShowEmpinfo" method="post">
+
+
+
+
+										<input type="hidden" name="id" value="<%=eid%>"> 
+										<div class="dropdown">
+											<a class="btn btn-success rounded-pill dropdown-toggle"
+												href="#" role="button" data-bs-toggle="dropdown"
+												aria-expanded="false"> <i class="fa fa-plus-circle"></i>
+												Manage
+											</a>
+
+											<ul class="dropdown-menu">
+												<li class="d-flex"> <i
+														class="fa-solid fa-eye text-success"></i><input
+											type="submit" value="View" class="btn dropdown-item"></li>
+														
+														
+												<li><a class="dropdown-item" href="UpdateEmp.jsp"><i
+														class="fa fa-edit text-info"></i> Edit</a></li>
+														
+														
+												<hr class="text-danger">
+												<li><a class="dropdown-item" href="#"><i
+														class="fa fa-trash-o text-danger"></i> Delete</a></li>
+											</ul>
+										</div>
+
+									</form>
+								</td>
+							</tr>
+							<%
+							}
+							
+							%>
+
+
+
+
+
+
+
+							<!-- 				<tr>
 								<th scope="row">1</th>
 								<td>Mark</td>
 								<td>Otto</td>
@@ -88,7 +160,8 @@
 											href="#" role="button" data-bs-toggle="dropdown"
 											aria-expanded="false"> <i class="fa fa-plus-circle"></i>
 											Manage
-										</a>
+										</a>........................................................
+										
 
 										<ul class="dropdown-menu">
 											<li><a href="ViewDetails.jsp" class="btn"><i
@@ -148,7 +221,7 @@
 										</ul>
 									</div>
 								</td>
-							</tr>
+							</tr>  -->
 						</tbody>
 					</table>
 				</div>

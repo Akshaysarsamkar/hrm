@@ -1,7 +1,7 @@
 package com.sevrlet;
 
 import java.io.IOException;
-
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.Dio.AdminDia;
@@ -28,6 +28,7 @@ System.out.println(uname +" "+pass);
 			Admin data = a.getUserByUserNamePassword(uname, pass);
 			
 			System.out.println(data);
+	
 
 			if (data == null) {
       

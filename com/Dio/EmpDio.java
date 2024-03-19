@@ -102,5 +102,60 @@ public class EmpDio {
 	
 	
 	
+public Emp EmpShow(String eid) {
+		
+		Emp e = null;
+		
+		try {
+			
+			String sql = "select * from Employee where EmpId = ?";
+			PreparedStatement pstm = conn.prepareStatement(sql);
+			
+			pstm.setString(1, eid);
+			
+			
+			ResultSet r = pstm.executeQuery();
+			
+			if(r.next()) {
+				e = new Emp();
+				
+				String fname = r.getString("FirstName");
+				int id = r.getInt("EmpId");
+				String lname = r.getString("LastName");
+				String email = r.getString("Email");
+				String Mobile = r.getString("Mobile");
+				String Gender = r.getString("Gender");
+				String AccountNo = r.getString("AccountNo");
+				String Language = r.getString("Language");
+				String Department = r.getString("Department");
+				String Emergency = r.getString("Emergency");
+				int salary = r.getInt("salary");
+				String BankName	= r.getString("BankName");			
+				
+				
+				
+				e.setFirstName(fname);
+				e.setEid(id);
+				e.setLastName(lname);
+			    e.setEmail(email);
+			    e.setMobile(Mobile);
+			    e.setGender(Gender);
+			    e.setAccountNo(AccountNo);
+			    e.setLanguage(Language);
+			    e.setDepartment(Department);
+			    e.setEmergency(Emergency);
+			    e.setSalary(salary);
+			    e.setBank(BankName);
+			    
+			}
+			
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+		return e;
+		
+	}
+	
 
 }

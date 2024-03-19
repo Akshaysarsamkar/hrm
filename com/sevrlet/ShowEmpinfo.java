@@ -2,10 +2,16 @@ package com.sevrlet;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 
+import com.Dio.EmpDio;
 import com.conn.DBConn;
-import com.mysql.cj.xdevapi.Statement;
+import com.entity.Emp;
+import com.mysql.cj.Session;
+
+import jakarta.servlet.http.HttpSession;
 
 @jakarta.servlet.annotation.WebServlet("/ShowEmpinfo")
 public class ShowEmpinfo extends jakarta.servlet.http.HttpServlet {
@@ -13,26 +19,51 @@ public class ShowEmpinfo extends jakarta.servlet.http.HttpServlet {
 
 	protected void doPost(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response) throws jakarta.servlet.ServletException, IOException {
 	
-		
+		String id = request.getParameter("id");
 		try {
 			
-			int id = Integer.parseInt(request.getParameter("id"));
-			
-			System.out.println("id is"+id);
-			
+              EmpDio e = new EmpDio(DBConn.getcon());
+			  Emp data = e.EmpShow(id);
+			  
+			    System.out.println("fetch data succefully.....");
+				HttpSession s = request.getSession();
+				s.setAttribute("empdata",data);
+
 			response.sendRedirect("ViewDetails.jsp");
 			
-			
-			Connection conn = DBConn.getcon();
-
-			
-			
-			
-			
 		}catch(Exception e) {
+			System.out.println(e);
 			
 		}
 		
 	}
 
 }
+
+
+
+
+
+
+//
+//System.out.println("id is:"+id);
+//
+//
+//
+//Connection con = DBConn.getcon();
+//
+////String sql = "select * from Employees where EmpId = ? ";
+////
+////PreparedStatement stm = con.prepareStatement(sql);
+////
+////stm.setString(1, id);
+//
+//Statement stm = con.createStatement();
+//
+//
+//ResultSet res = stm.executeQuery("select * from Employee where EmpId = " + id);
+//
+//
+//HttpSession s = request.getSession();
+//s.setAttribute("Empinfo", res);
+//
