@@ -1,3 +1,7 @@
+<%@page import="com.conn.DBConn"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.Date"%>
@@ -68,30 +72,59 @@
 						<p>***All Field Are Required</p>
 						<hr class="text-danger">
 
-						<form>
+						<form action="EmpAttendence" method="post">
 							<div class="mb-3">
-								<label for="exampleInputdate" class="form-label">Email </label>
-								<input type="" class="form-control" id="exampleInputdate"
-									aria-describedby="emailHelp" value="<%=date%>">
+								<label for="exampleInputdate" class="form-label">Date</label> <input
+								name="date"	type="" class="form-control" id="exampleInputdate"
+									aria-describedby="emailHelp" value="<%=date%>" >
 
 							</div>
 							<div class="mb-3">
 								<label for="exampleInputstaffer" class="form-label">Staffer
-								</label> <select class="form-select" aria-label="Size 3 select example"
-									id="exampleInputstaffer">
+								</label> <select class="form-select"
+									aria-label="Size 3 select example" id="exampleInputstaffer"
+									name="staffer">
 									<option selected>-----------------</option>
-									<option value="1">One</option>
+
+
+
+									<%
+									int eid, salary;
+									String FirstName, LastName, Email, Mobile, Gender, Bank, AccountNo, Language, Department, Emergency;
+									Connection con = DBConn.getcon();
+									Statement stm = con.createStatement();
+
+									ResultSet res = stm.executeQuery("select * from Employee");
+                                   int i=0;
+									while (res.next()) {
+                                        i++;
+										FirstName = res.getString("FirstName");
+										LastName = res.getString("LastName");
+									%>
+									<option value="<%= i %>"><%=FirstName + " " + LastName%></option>
+									<%
+									}
+									%>
+
+									<%-- 	<option value="1">One</option>
 									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="3">Three</option>--%>
 								</select>
 							</div>
+
+
+
+
+
 
 							<div class="mb-3">
 								<label for="" exampleInputstatus"" class="form-label">Status
 								</label> <select class="form-select form-select-sm"
-									aria-label="Small select example">
-									<option value="1">Present</option>
+									aria-label="Small select example" name="status">
+
+						            <option value="1">Present</option>
 									<option value="2">Absents</option>
+									 	
 
 								</select>
 							</div>
@@ -136,21 +169,27 @@
 								<td>Mark</td>
 								<td>Otto</td>
 								<td>@mdo</td>
-								<td><button type="button" class="btn btn-primary"><i class="fa fa-sign-in"></i>  SignOut</button></td>
+								<td><button type="button" class="btn btn-primary">
+										<i class="fa fa-sign-in"></i> SignOut
+									</button></td>
 							</tr>
 							<tr>
 								<th scope="row">2</th>
 								<td>Jacob</td>
 								<td>Thornton</td>
 								<td>@fat</td>
-								<td><button type="button" class="btn btn-primary"><i class="fa fa-sign-in"></i>  SignOut</button></td>
+								<td><button type="button" class="btn btn-primary">
+										<i class="fa fa-sign-in"></i> SignOut
+									</button></td>
 							</tr>
 							<tr>
 								<th scope="row">3</th>
 								<td>Larry the Bird</td>
 								<td>@twitter</td>
 								<td>@mdo</td>
-								<td><button type="button" class="btn btn-primary"><i class="fa fa-sign-in"></i>  SignOut</button></td>
+								<td><button type="button" class="btn btn-primary">
+										<i class="fa fa-sign-in"></i> SignOut
+									</button></td>
 							</tr>
 						</tbody>
 					</table>

@@ -57,10 +57,10 @@
 						<i class="fa fa-plus" style="font-size: 48px; color: skyblue"></i>
 						Add Department
 					</h1>
-					<form>
+					<form action="AddDepartment" method="post">
 						<div class="mb-3">
 							<label for="exampleInputtext" class="form-label">Department
-								Name </label> <input type="text" class="form-control"
+								Name </label> <input name="dname" type="text" class="form-control"
 								id="exampleInputtext" aria-describedby="textHelp">
 
 						</div>
@@ -68,12 +68,12 @@
 
 						<div class="mb-3">
 							<label for="exampleInputhistory" class="form-label">History
-								</label> <input type="text" class="form-control"
+								</label> <input name="hostory" type="text" class="form-control"
 								id="exampleInputhistory	">
 						</div>
 
-						<a type="button" class="text-center btn btn-outline-success text-center"><i
-							class="fa fa-plus-circle"></i> Add Department</a>
+						<button type="submit" class="text-center btn btn-outline-success text-center"><i
+							class="fa fa-plus-circle"></i> Add Department</button>
 					</form>
 				</div>
 
