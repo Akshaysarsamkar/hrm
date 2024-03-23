@@ -24,11 +24,11 @@ public class EmpDio {
 			
 			String sql = "INSERT INTO Employee(FirstName,LastName,Email,Mobile,Gender,BankName,AccountNo,Language,Department,Emergency,salary) VALUES (?,?,?,?,?,?,?,?,?,?,?)" ;
 			
-			System.out.println("22222222222222222222");
+			//System.out.println("22222222222222222222");
 			
 			PreparedStatement pstm = conn.prepareStatement(sql);
 			
-			System.out.println("33333333333333333333");
+			//System.out.println("33333333333333333333");
 			
 			pstm.setString(1, e.getFirstName());
 			pstm.setString(2, e.getLastName());
@@ -46,7 +46,7 @@ public class EmpDio {
 			
 			int execute = pstm.executeUpdate();
 			
-			System.out.println("4444444444444444");
+			//System.out.println("4444444444444444");
 			
 			if(execute == 1) {
 				f = true;

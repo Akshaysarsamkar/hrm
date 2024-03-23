@@ -25,8 +25,8 @@ public class AttendenceDio {
 			PreparedStatement pstm = conn.prepareStatement(sql);
 			
 			pstm.setString(1, attandence.getDate());
-			pstm.setString(1, attandence.getStaffer());
-			pstm.setString(2, attandence.getStatus());
+			pstm.setString(2, attandence.getStaffer());
+			pstm.setString(3, attandence.getStatus());
 			
 			int execute = pstm.executeUpdate();
 			if( execute == 1) {

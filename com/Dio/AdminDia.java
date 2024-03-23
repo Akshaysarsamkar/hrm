@@ -21,9 +21,9 @@ public class AdminDia {
 		try {
 
 			String sql = "INSERT INTO Admin(uname,password,email) VALUES(?,?,?)";
-			System.out.println(sql);
+			//System.out.println(sql);
 			PreparedStatement pstm = conn.prepareStatement(sql);
-			System.out.println(sql);
+		//	System.out.println(sql);
 
 			pstm.setString(1, a.getUsername());
 			pstm.setString(2, a.getPassword());
@@ -53,7 +53,7 @@ public class AdminDia {
 			PreparedStatement pstm = conn.prepareStatement(q);
 			pstm.setString(1, username);
 			pstm.setString(2, password);
-System.out.println(pstm.toString());
+//System.out.println(pstm.toString());
 			ResultSet r = pstm.executeQuery();
 
 			if (r.next()) {
