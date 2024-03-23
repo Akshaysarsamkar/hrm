@@ -1,3 +1,7 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="com.conn.DBConn"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -54,6 +58,8 @@
 				<%-- New Employees Details --%>
 				<div class="p-3 border border-dark-subtle bg-light ">
 
+
+
 					<%-- table --%>
 					<table class="table">
 						<thead>
@@ -70,7 +76,50 @@
 							</tr>
 						</thead>
 						<tbody>
+
+							<%
+							int eid, salary;
+							String FirstName, LastName, Email, Mobile, Gender, Bank, AccountNo, Language, Department, Emergency;
+							Connection con = DBConn.getcon();
+							Statement stm = con.createStatement();
+
+							ResultSet res = stm.executeQuery("select * from Employee");
+
+							while (res.next()) {
+
+								eid = res.getInt("EmpId");
+								FirstName = res.getString("FirstName");
+								LastName = res.getString("LastName");
+								AccountNo = res.getString("AccountNo");
+								Bank = res.getString("BankName");
+								salary = Integer.parseInt(res.getString("salary"));
+							%>
+
+
 							<tr>
+								<th scope="row">1</th>
+								<td><%= FirstName%></td>
+								<td><%=LastName %></td>
+								<td><%=AccountNo %></td>
+								<td><%=Bank %></td>
+								<td><%=salary %></td>
+								<td>
+									<button type="button" class="btn btn-danger"
+										onclick="Notification();">Pay</button>
+								</td>
+							</tr>
+
+
+
+
+
+							<%
+							}
+							%>
+
+
+
+				<%-- 		<tr>
 								<th scope="row">1</th>
 								<td>Mark</td>
 
@@ -107,7 +156,8 @@
 								<td>
 									<button type="button" class="btn btn-danger"
 										onclick="Notification();">Pay</button>
-							</tr>
+							</tr> 
+							--%>	
 						</tbody>
 					</table>
 				</div>
@@ -115,10 +165,13 @@
 
 		</div>
 	</div>
-	<script>	
+	<script>
 		function Notification() {
 
-			swal("Transactions Successful!", "the sum of #80000 has been deposite into the account Number 1230456987 at SBI Bank Pic!", "success");
+			swal(
+					"Transactions Successful!",
+					"the sum of #80000 has been deposite into the account Number 1230456987 at SBI Bank Pic!",
+					"success");
 
 		}
 	</script>

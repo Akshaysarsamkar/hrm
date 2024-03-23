@@ -58,40 +58,40 @@
 				<%-- Leave Application Form --%>
 				<div
 					class="border px-4 py-4 border-dark-subtle my-3 bg-body-secondary">
-					<form>
+					<form  method="post" action="Addleave">
 						<h3 class="mb-3">Employees Leave Form</h3>
 						<div class="mb-3">
 							<label for="exampleInputsdate" class="form-label">Staring
-								Date </label> <input type="date" class="form-control"
+								Date </label> <input name="sdate" type="date" class="form-control"
 								id="exampleInputsdate" aria-describedby="emailHelp">
 
 						</div>
 						<div class="mb-3">
 							<label for="exampleInputedate" class="form-label">Ending
-								Date</label> <input type="date" class="form-control"
+								Date</label> <input name="edate" type="date" class="form-control"
 								id="exampleInputedate">
 						</div>
 
 						<div class="mb-3">
 							<label for="exampleInputtype" class="form-label">Your
-								Leave Type </label> <select class="form-select form-select-lg mb-3"
+								Leave Type </label> <select name="ltype" class="form-select form-select-lg mb-3"
 								aria-label="Large select example" id="exampleInputtype">
 								<option selected>Click Here To Select Any</option>
-								<option value="1">Casual Leave</option>
-								<option value="2">Medical Leave</option>
-								<option value="3">Voting Leave</option>
-								<option value="4">Paternity Leave</option>
-								<option value="5">Maternity Leave</option>
-								<option value="6">Personal Time Off</option>
-								<option value="7">Religious Holiday</option>
-								<option value="8">Compensatory Leave</option>
+								<option value="Casual Leave">Casual Leave</option>
+								<option value="Medical Leave">Medical Leave</option>
+								<option value="Voting Leave">Voting Leave</option>
+								<option value="Paternity Leave">Paternity Leave</option>
+								<option value="Maternity Leave">Maternity Leave</option>
+								<option value="Personal Time Off">Personal Time Off</option>
+								<option value="Religious Holiday">Religious Holiday</option>
+								<option value="Compensatory Leave">Compensatory Leave</option>
 							</select>
 						</div>
 
 						<div class="mb-3">
 							<label for="floatingTextarea" class="form-label">Describe
 								Your Condition Date</label>
-							<textarea class="form-control" placeholder="Leave a comment here"
+							<textarea name="dec" class="form-control" placeholder="Leave a comment here"
 								id="floatingTextarea"></textarea>
 
 						</div>

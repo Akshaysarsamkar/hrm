@@ -101,7 +101,7 @@
 										FirstName = res.getString("FirstName");
 										LastName = res.getString("LastName");
 									%>
-									<option value="<%= i %>"><%=FirstName + " " + LastName%></option>
+									<option value="<%=FirstName + " " + LastName%>"><%=FirstName + " " + LastName%></option>
 									<%
 									}
 									%>
@@ -122,8 +122,8 @@
 								</label> <select class="form-select form-select-sm"
 									aria-label="Small select example" name="status">
 
-						            <option value="1">Present</option>
-									<option value="2">Absents</option>
+						            <option value="Present">Present</option>
+									<option value="Absents">Absents</option>
 									 	
 
 								</select>
